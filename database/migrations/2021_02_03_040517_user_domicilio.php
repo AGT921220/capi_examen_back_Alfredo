@@ -21,7 +21,6 @@ class UserDomicilio extends Migration
             $table->string('numero_exterior');
             $table->string('cp');
             $table->string('ciudad');
-
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class UserDomicilio extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('user_domicilio');
     }
 }
